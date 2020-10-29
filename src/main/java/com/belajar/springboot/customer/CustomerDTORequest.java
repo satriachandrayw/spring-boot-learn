@@ -1,4 +1,4 @@
-package com.belajar.springboot.author;
+package com.belajar.springboot.customer;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,9 +8,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class AuthorDTORequest {
+public class CustomerDTORequest {
     private String name;
 }
