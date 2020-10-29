@@ -23,14 +23,15 @@ public class BookController {
     @ResponseBody
     public List<BookDTOResponse> findAll() {
         List<Book> books = this.bookService.findAll();
-        return books.stream().map(book -> book.convertToDTOResponse()).collect(Collectors.toList());
+        return books.stream().map(book -> BookDTOResponse.parse(book)).collect(Collectors.toList());
     }
 
     @PostMapping("/books")
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
     public BookDTOResponse create(@RequestBody BookDTORequest bookDTORequest) {
-        Book book = this.bookService.create(new Book(bookDTORequest.getName()));
-        return book.convertToDTOResponse();
+        Book book = Book.parse(bookDTORequest);
+        this.bookService.add(book);
+        return BookDTOResponse.parse(book);
     }
 }
