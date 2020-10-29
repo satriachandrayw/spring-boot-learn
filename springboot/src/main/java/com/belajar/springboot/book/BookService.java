@@ -9,8 +9,13 @@ import org.springframework.stereotype.Service;
 public class BookService {
     @Autowired
     private BookRepository bookRepository;
-    
-    public List<Book> findAll(){
+
+    public List<Book> findAll() {
         return this.bookRepository.findAll();
     }
+
+    public Book create(Book book) {
+        return this.bookRepository.save(book);
+    }
+
 }

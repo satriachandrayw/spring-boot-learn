@@ -33,7 +33,11 @@ public class Book {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    public BookDTOResponse convertToDTOResponse(Book book){
-        return new BookDTOResponse(book.getId(),book.getName(),book.getCreatedAt(),book.getUpdatedAt());
+    public Book(String name){
+        this.name = name;
+    }
+
+    public BookDTOResponse convertToDTOResponse(){
+        return new BookDTOResponse(this.id,this.name,this.createdAt,this.updatedAt);
     }
 }
