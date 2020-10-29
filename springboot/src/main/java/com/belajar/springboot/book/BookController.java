@@ -16,11 +16,12 @@ public class BookController {
 
     @GetMapping("/books")
     @ResponseBody
-    public List<BookDTOResponse> findAll(){
-        List<Book> books= this.bookService.findAll();
+    public List<BookDTOResponse> findAll() {
+        List<Book> books = this.bookService.findAll();
 
-        return books.stream().map(book -> new BookDTOResponse(book.getId(), book.getName(), book.getCreatedAt(), book.getUpdatedAt()))
-            .collect(Collectors.toList());
+        return books.stream().map(
+                book -> new BookDTOResponse(book.getId(), book.getName(), book.getCreatedAt(), book.getUpdatedAt()))
+                .collect(Collectors.toList());
     }
 
 }

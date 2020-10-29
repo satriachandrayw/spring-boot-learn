@@ -1,0 +1,10 @@
+INSERT INTO "public"."books" ("name") VALUES ('sample book 1');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 2');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 3');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 4');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 5');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 6');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 7');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 8');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 9');
+INSERT INTO "public"."books" ("name") VALUES ('sample book 10');
